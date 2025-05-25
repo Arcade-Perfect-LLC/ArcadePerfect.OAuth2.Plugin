@@ -1,11 +1,12 @@
-﻿using System.Collections.Specialized;
-
-namespace ArcadePerfect.OAuth2.Plugin;
+﻿namespace ArcadePerfect.OAuth2.Plugin;
 /// <summary>
 /// Provides methods to initiate and manage OAuth2 authentication flows for OAuthProvider.
 /// </summary>
 public interface IArcadePerfectOAuth2Service
 {
+	/// <summary>
+	/// **** ONLY USE IF USING WITH DIFERENT OAUTH PROVIDER THAN THE MAIN ONE ****<br/>
+	/// </summary>
 	const string DEFAULT_HTML = "<html><head><title>OAuth 2.0 Authentication Code Received</title></head><body> Authorized!. You may now close this window.</body></html>";
 	/// <summary>
 	/// **** ONLY USE IF USING WITH DIFERENT OAUTH PROVIDER THAN THE MAIN ONE ****<br/>

@@ -9,6 +9,6 @@ public partial class App : Application
 
 	protected override Window CreateWindow(IActivationState? activationState)
 	{
-		return new Window(new MainPage()) { Title = "ArcadePerfect.OAuth2.Sample" };
+		return new Window(new MainPage()) { Title = "ArcadePerfect.OAuth2.Sample", MaximumWidth = 800, MaximumHeight=600 };
 	}
 }

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Specialized;
 
 namespace ArcadePerfect.OAuth2.Plugin;
+/// <summary>
+/// Represents the OAuth2 authentication result for ArcadePerfect.<br/>
+/// </summary>
 public class ArcadePerfectOAuth
 {
 	/// <summary>
@@ -19,14 +17,26 @@ public class ArcadePerfectOAuth
 	/// </summary>
 	public NameValueCollection? QueryString { get; init; } = default;
 
+	/// <summary>
+	/// Contains the error log if any error occurs during the OAuth flow.<br/>
+	/// </summary>
 	public string? ErrorLog { get; set; }
 
+	/// <summary>
+	/// Creates an instance of the ArcadePerfectOAuth class.<br/>
+	/// </summary>
+	/// <param name="authorization_Code"></param>
+	/// <param name="queryString"></param>
 	public ArcadePerfectOAuth(string? authorization_Code, NameValueCollection? queryString)
 	{
 		Authorization_Code = authorization_Code;
 		QueryString = queryString;
 	}
 
+	/// <summary>
+	/// Creates an instance of the ArcadePerfectOAuth class.<br/>
+	/// </summary>
+	/// <param name="errorLog"></param>
 	public ArcadePerfectOAuth(string? errorLog)
 	{
 		ErrorLog = errorLog;

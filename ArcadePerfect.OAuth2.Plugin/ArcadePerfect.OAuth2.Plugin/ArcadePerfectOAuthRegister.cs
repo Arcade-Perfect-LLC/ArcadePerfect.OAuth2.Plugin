@@ -5,6 +5,9 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace ArcadePerfect.OAuth2.Plugin;
 
+/// <summary>
+/// Extension methods for registering the ArcadePerfectOAuth2Service with the dependency injection container.
+/// </summary>
 [ExcludeFromCodeCoverage]
 public static class ArcadePerfectOAuthRegister
 {

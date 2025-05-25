@@ -17,6 +17,27 @@ a, .btn-link {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+.hide{
+    display: none;
+}
+
+.flexi {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction:column;
+}
+
+.global-margin{
+    margin: 10px;
+}
+
+.show{
+    display: flex;
+    justify-content: center;
+}
+
 .content {
     padding-top: 1.1rem;
 }
