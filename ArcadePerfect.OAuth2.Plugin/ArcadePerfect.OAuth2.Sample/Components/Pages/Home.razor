@@ -1,6 +1,6 @@
 ﻿@page "/"
 
-@inject ArcadePerfect.OAuth2.Plugin.IArcadePerfectOAuth2Service apOAuthService
+@inject IArcadePerfectOAuth2Service apOAuthService
 
 <div class="flexi">
 	<h1>Hello, world!</h1>
@@ -17,7 +17,7 @@
 	private async Task LaunchOAuth()
 	{
 
-		var resp = await apOAuthService.LaunchOAuthFlow();
+		ArcadePerfectOAuth resp = await apOAuthService.LaunchOAuthFlow();
 
 		Debug.WriteLine($"resp: {JsonSerializer.Serialize(resp)}");
 
