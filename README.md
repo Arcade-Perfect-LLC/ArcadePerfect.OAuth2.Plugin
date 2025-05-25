@@ -17,6 +17,8 @@ A modular OAuth2 authentication plugin for C# applications built with **Dependen
 - ✅ WPF and WinForms apps
 - ✅ Windows Services
 
+## Nuget
+https://www.nuget.org/packages/ArcadePerfect.OAuth2.Plugin
 
 ## Support this project in Patreon
 - https://www.patreon.com/c/arcadeperfectllc/membership
