@@ -1,0 +1,18 @@
+﻿@page "/"
+
+@inject ArcadePerfect.OAuth2.Plugin.IArcadePerfectOAuth2Service apOAuthService
+
+<h1>Hello, world!</h1>
+
+	Welcome to your OAUTH2 Test App.
+<br />
+<button style="background-color: #0e4b77; color: white; padding: 20px;" @onclick="LaunchOAuth">Authenticate</button>
+
+@code{
+	private async Task LaunchOAuth()
+	{
+
+		var resp = await apOAuthService.LaunchOAuthFlow();
+		Debug.WriteLine($"resp: {JsonSerializer.Serialize(resp)}");
+	}
+}
