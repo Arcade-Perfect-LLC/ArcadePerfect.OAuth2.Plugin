@@ -16,7 +16,7 @@ public static class MauiProgram
 
 		builder.Services.AddMauiBlazorWebView();
 
-		builder.Services.AddArcadePerfectOAuthServices($"YOUR OAUTH2 URL HERE");
+		builder.Services.AddArcadePerfectOAuthServices();
 
 #if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();

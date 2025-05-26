@@ -19,7 +19,7 @@ public interface IArcadePerfectOAuth2Service
 	/// <param name="html">The HTML content to display after the user authorizes the application. Defaults to a simple success message.</param>
 	/// <param name="port">The local port to listen on for the redirect from the OAuth provider. Defaults to 41794.</param>
 	/// <returns>The task result contains object [<see cref="ArcadePerfectOAuth"/>] with authorization code and query strings containing others url parameters if successful; otherwise, null.</returns>
-	Task<ArcadePerfectOAuth> LaunchOAuthFlowForced(string OAuthURL, string html = DEFAULT_HTML, int port = 41794);
+	Task<ArcadePerfectOAuth> LaunchOAuthFlow(string OAuthURL, string html = DEFAULT_HTML, int port = 41794);
 
 	/// <summary>
 	/// Initiates the OAuth2 authentication flow. It starts a local HTTP listener on the specified port 
@@ -29,4 +29,11 @@ public interface IArcadePerfectOAuth2Service
 	/// </summary>
 	/// <returns>The task result contains object [<see cref="ArcadePerfectOAuth"/>] with authorization code and query strings containing others url parameters if successful; otherwise, null.</returns>
 	Task<ArcadePerfectOAuth> LaunchOAuthFlow();
+
+	/// <summary>
+	/// Initiates the OAuth2 authentication flow and receive the callback from the OAuth provider after the user authenticates in their default browser.<br/>
+	/// </summary>
+	/// <param name="OAuthURL">The authorization URL of the OAuth2 provider.</param>
+	/// <returns>The task result contains object [<see cref="ArcadePerfectOAuth"/>] with authorization code and query strings containing others url parameters if successful; otherwise, null.</returns>
+	Task<ArcadePerfectOAuth> LaunchOAuthFlow(string OAuthURL);
 }

@@ -18,6 +18,8 @@
     <PackageReleaseNotes>Initial Release.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageVersion >1.1.0</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
